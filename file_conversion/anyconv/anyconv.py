@@ -11,6 +11,7 @@ class Anyconv:
         self.target_file = info['target_file']
         self.to = info['to']
         self.uniq_id = self._get_random_number(32)
+        print(f"ID: {self.uniq_id}")
 
 
     def convert(self):
@@ -29,7 +30,7 @@ class Anyconv:
         resp = self._post(template)
 
     def _check_status(self):
-        status_api = f"curl -XGET https://anyconv.com/api/action/status/{self.uniq_id}/ &> /dev/null"
+        status_api = f"curl -XGET https://anyconv.com/api/action/status/{self.uniq_id}/" # &> /dev/null"
         resp = os.system(status_api)
 
 
