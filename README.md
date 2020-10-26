@@ -12,7 +12,7 @@ This is python program to do convert any file from one format to another. This i
 
 
 ```
-$ python file_conversion.py
+python file_conversion.py
 ```
 
 This will read the info from the info.json and will convert the file in provided location.
